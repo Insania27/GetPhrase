@@ -40,4 +40,5 @@ class MainActivity : AppCompatActivity() {
     var checkGitWorks = true
     var checkCommitCounter = true
     var checkCommitCounterTry2 = true
+    var checkCommitCounterTry3 = true
 }
