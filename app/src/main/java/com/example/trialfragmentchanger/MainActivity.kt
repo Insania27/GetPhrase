@@ -39,5 +39,4 @@ class MainActivity : AppCompatActivity() {
     }
     var checkGitWorks = true
     var checkCommitCounter = true
-    var checkCommitCounter = true
 }
