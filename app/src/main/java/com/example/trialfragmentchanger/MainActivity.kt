@@ -38,6 +38,5 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.fragmentLayout, fragment).commit()
     }
     var checkGitWorks = true
-    var checkCommitCounter = true
-    var checkCommitCounter2 = true
+
 }
