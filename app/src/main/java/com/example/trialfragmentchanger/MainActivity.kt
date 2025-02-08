@@ -21,14 +21,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        replaceFragment(Fragment1())
+        binding.bottomNav.setSelectedItemId(R.id.profile)
+        replaceFragment(ProfileFragment())
 
         binding.bottomNav.setOnItemSelectedListener {
             when(it.itemId) {
-                R.id.home -> replaceFragment(Fragment1())
-                R.id.add -> replaceFragment(Fragment2())
-                R.id.menu -> replaceFragment(Fragment3())
-                R.id.settings -> replaceFragment(Fragment4())
+                R.id.profile -> replaceFragment(ProfileFragment())
+                R.id.myBooks -> replaceFragment(MyBooksFragment())
+                R.id.menu -> replaceFragment(MainMenuFragment())
+                R.id.search -> replaceFragment(SearchFragment())
             }
             true
         }
@@ -37,7 +38,6 @@ class MainActivity : AppCompatActivity() {
     private fun replaceFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().replace(R.id.fragmentLayout, fragment).commit()
     }
-    var checkConnection = true
 
 
 }

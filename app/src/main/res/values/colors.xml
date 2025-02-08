@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="checked">#5534f7</color>
-    <color name="unchecked">#0a0078</color>
+    <color name="checked">#F66739</color>
+    <color name="unchecked">#626262</color>
+    <color name="editTextBorder">#BCBCBC</color>
 </resources>

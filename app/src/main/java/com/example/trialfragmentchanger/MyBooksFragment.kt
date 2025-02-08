@@ -6,8 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-
-class Fragment4 : Fragment() {
+class MyBooksFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,17 +14,14 @@ class Fragment4 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_4, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        return inflater.inflate(R.layout.fragment_my_books, container, false)
     }
 
     companion object {
 
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Fragment4()
+            MyBooksFragment()
+
     }
 }

@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class Fragment1 : Fragment() {
+class MainMenuFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,18 +15,14 @@ class Fragment1 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_1, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        return inflater.inflate(R.layout.fragment_main_menu, container, false)
     }
 
     companion object {
 
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Fragment1()
+            MainMenuFragment()
 
     }
 }

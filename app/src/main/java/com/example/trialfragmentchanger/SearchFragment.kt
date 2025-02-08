@@ -7,8 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class Fragment2 : Fragment() {
-
+class SearchFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,17 +15,14 @@ class Fragment2 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_2, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        return inflater.inflate(R.layout.fragment_search, container, false)
     }
 
     companion object {
 
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Fragment2()
+            SearchFragment()
+
     }
 }

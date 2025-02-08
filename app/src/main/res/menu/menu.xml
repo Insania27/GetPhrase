@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:title="Home"
-        android:id="@+id/home"
-        android:icon="@drawable/ic_home"/>
+        android:title="Профиль"
+        android:id="@+id/profile"
+        android:orderInCategory="4"
+        android:icon="@drawable/ic_profilebutton"/>
     <item
-        android:title="Settings"
-        android:id="@+id/settings"
-        android:icon="@drawable/ic_settings"/>
+        android:title="Мои книги"
+        android:orderInCategory="3"
+        android:id="@+id/myBooks"
+        android:icon="@drawable/ic_bookbutton"/>
     <item
-        android:title="Add"
-        android:id="@+id/add"
-        android:icon="@drawable/ic_add"/>
+        android:title="Поиск"
+        android:id="@+id/search"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_searchbutton"/>
     <item
-        android:title="Menu"
+        android:title="Меню"
         android:id="@+id/menu"
+        android:orderInCategory="1"
         android:icon="@drawable/ic_menu"/>
 </menu>
