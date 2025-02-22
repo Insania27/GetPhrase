@@ -5,13 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.findViewTreeViewModelStoreOwner
+import com.example.trialfragmentchanger.databinding.FragmentLoginBinding
 import com.example.trialfragmentchanger.databinding.FragmentProfileBinding
 
 
-class ProfileFragment : Fragment() {
+class LoginFragment : Fragment() {
 
-    private var _binding: FragmentProfileBinding? = null
-    private val binding get() = _binding
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
 
 
     override fun onCreateView(
@@ -19,13 +21,16 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        return inflater.inflate(R.layout.fragment_login, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        _binding = FragmentProfileBinding.bind(view)
-
+        _binding = FragmentLoginBinding.bind(view)
+        binding.loginButton.setOnClickListener {
+            (requireActivity() as MainActivity).replaceFragment(ProfileFragment())
+        }
 
     }
 
@@ -33,8 +38,7 @@ class ProfileFragment : Fragment() {
 
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            ProfileFragment()
-
+            LoginFragment()
 
     }
 }

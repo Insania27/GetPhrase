@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="checked">#F66739</color>
     <color name="unchecked">#626262</color>
+    <color name="noColor">#00626262</color>
     <color name="editTextBorder">#BCBCBC</color>
 </resources>

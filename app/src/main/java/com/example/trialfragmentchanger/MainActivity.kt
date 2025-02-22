@@ -1,6 +1,7 @@
 package com.example.trialfragmentchanger
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -21,21 +22,26 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+
+
         binding.bottomNav.setSelectedItemId(R.id.profile)
-        replaceFragment(ProfileFragment())
+        replaceFragment(LoginFragment())
+
 
         binding.bottomNav.setOnItemSelectedListener {
             when(it.itemId) {
-                R.id.profile -> replaceFragment(ProfileFragment())
+                R.id.profile -> replaceFragment(LoginFragment())
                 R.id.myBooks -> replaceFragment(MyBooksFragment())
                 R.id.menu -> replaceFragment(MainMenuFragment())
                 R.id.search -> replaceFragment(SearchFragment())
             }
             true
         }
+
+
     }
 
-    private fun replaceFragment(fragment: Fragment){
+    fun replaceFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().replace(R.id.fragmentLayout, fragment).commit()
     }
 
