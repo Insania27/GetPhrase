@@ -32,6 +32,7 @@ class LoginFragment : Fragment() {
             (requireActivity() as MainActivity).replaceFragment(ProfileFragment())
         }
 
+
     }
 
     companion object {

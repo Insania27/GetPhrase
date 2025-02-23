@@ -25,6 +25,9 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         _binding = FragmentProfileBinding.bind(view)
+        binding?.profileLayout?.setOnClickListener {
+            (requireActivity() as MainActivity).replaceFragment(ProfileSettingsFragment())
+        }
 
 
     }
