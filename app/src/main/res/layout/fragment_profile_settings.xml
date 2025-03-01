@@ -19,7 +19,7 @@
             android:layout_marginEnd="46dp"
             android:layout_marginBottom="246dp"
             android:background="@drawable/profile_layout_border"
-            android:backgroundTint="#FBC67D"
+            android:backgroundTint="#7DFBAF"
             android:foregroundTint="#3F51B5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -96,5 +96,20 @@
             android:textColor="#686767"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/infoSaveButton"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="145dp"
+            android:backgroundTint="#3972F6"
+            android:text="Сохранить"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profSetLayout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

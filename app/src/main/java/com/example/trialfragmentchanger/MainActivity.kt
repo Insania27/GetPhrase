@@ -1,7 +1,6 @@
 package com.example.trialfragmentchanger
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -42,7 +41,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun replaceFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction().replace(R.id.fragmentLayout, fragment).commit()
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragmentLayout, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 
 

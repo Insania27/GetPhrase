@@ -5,13 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.example.trialfragmentchanger.databinding.FragmentProfileBinding
 
 
 class ProfileFragment : Fragment() {
 
+    private lateinit var viewModel: DataModel
+
     private var _binding: FragmentProfileBinding? = null
-    private val binding get() = _binding
+    private val binding get() = _binding!!
 
 
     override fun onCreateView(
@@ -25,9 +29,25 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         _binding = FragmentProfileBinding.bind(view)
-        binding?.profileLayout?.setOnClickListener {
+
+        viewModel = ViewModelProvider(requireActivity())[DataModel::class.java]
+
+        binding.profileLayout.setOnClickListener {
             (requireActivity() as MainActivity).replaceFragment(ProfileSettingsFragment())
         }
+
+
+
+        viewModel.nameOfUser.observe(viewLifecycleOwner){ newText ->
+            binding.profileNameText.text = newText
+        }
+
+        viewModel.surnameOfUser.observe(viewLifecycleOwner){ newText ->
+            binding.profileSurnameText.text = newText
+        }
+
+
+
 
 
     }
