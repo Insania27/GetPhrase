@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TrialFragmentChanger"
+rootProject.name = "GetPhrase"
 include(":app")
  
