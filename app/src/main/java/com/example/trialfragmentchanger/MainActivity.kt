@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNav.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.profile -> replaceFragment(LoginFragment())
-                R.id.myBooks -> replaceFragment(MyBooksFragment())
+                R.id.favorites -> replaceFragment(MyBooksFragment())
                 R.id.menu -> replaceFragment(MainMenuFragment())
                 R.id.search -> replaceFragment(SearchFragment())
             }

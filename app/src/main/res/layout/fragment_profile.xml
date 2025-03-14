@@ -14,7 +14,7 @@
             android:id="@+id/profileLayout"
             android:layout_width="364dp"
             android:layout_height="138dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="31dp"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="31dp"
             android:layout_marginBottom="512dp"
@@ -77,5 +77,129 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/profileItemsLayout"
+            android:layout_width="364dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginBottom="140dp"
+            android:background="@drawable/profile_layout_border"
+            android:backgroundTint="#7DFBAF"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileLayout">
+
+            <LinearLayout
+                android:id="@+id/layoutLearned"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageLearned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/ic_flag_learned"
+                    app:layout_constraintEnd_toStartOf="@+id/textLearning"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textLearned"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="260dp"
+                    android:gravity="center_vertical"
+                    android:text="Изучено"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageArrowLearned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_arrow" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="345.8dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="#A0A0A0" />
+
+            <LinearLayout
+                android:id="@+id/layoutLearning"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="#6D6666"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageLearning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/ic_learning_note_time"
+                    app:layout_constraintEnd_toStartOf="@+id/textLearning"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textLearning"
+                    android:layout_width="230dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="260dp"
+                    android:gravity="center_vertical"
+                    android:text="В процессе"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageArrowLearning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_arrow" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="345.8dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="#A0A0A0" />
+
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

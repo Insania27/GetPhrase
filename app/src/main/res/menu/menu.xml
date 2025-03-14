@@ -6,10 +6,10 @@
         android:orderInCategory="4"
         android:icon="@drawable/ic_profilebutton"/>
     <item
-        android:title="Мои книги"
+        android:title="Избранное"
         android:orderInCategory="3"
-        android:id="@+id/myBooks"
-        android:icon="@drawable/ic_bookbutton"/>
+        android:id="@+id/favorites"
+        android:icon="@drawable/ic_favorites"/>
     <item
         android:title="Поиск"
         android:id="@+id/search"
